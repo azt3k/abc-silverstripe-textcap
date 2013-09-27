@@ -2,12 +2,12 @@
 
 class AbcTextCap {
 
-	public static $textCaptchaApiKey = '1opp82v98xxc48k0gcko40k8s4z2qq8s';
+	public static $text_captcha_api_key = null;
 
 	public static function getCapData(){
 
 		// try to use the text captcha service
-		$response = file_get_contents('http://api.textcaptcha.com/'.self::$textCaptchaApiKey);
+		$response = file_get_contents('http://api.textcaptcha.com/'.self::$text_captcha_api_key);
 		if ($response) {
 			$document = new DOMDocument();
 			if ($document->loadXML($response)) {

@@ -1,6 +1,6 @@
 {
     "name": "azt3k/abc-silverstripe-textcap",
-    "description": "Text based captcha module for Silverstripe",
+    "description": "Text based captcha module for SilverStripe",
     "license": "BSD",
     "type": "silverstripe-module",    
     "authors": [

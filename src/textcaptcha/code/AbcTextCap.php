@@ -44,7 +44,6 @@ class AbcTextCap {
 		$data = Session::get("AbcTextCap");
 		$isValid = false;
 		foreach ($data->a as $a) {
-			echo md5(strtolower(trim($answer))).' => '.$a."\n";
 			if (md5(strtolower(trim($answer))) == $a) $isValid = true;
 		}
 		return $isValid;

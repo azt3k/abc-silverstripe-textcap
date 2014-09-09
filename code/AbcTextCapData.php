@@ -58,16 +58,16 @@ class AbcTextCapData {
 		array (
 			'q'		=> 'Do fish live on land or in water?',
 			'a'		=> array('in water','water')
-		)			
-		
+		)
+
 	);
-	
+
 	public static function getChallenge(){
 		$rand = mt_rand(0, 1);
 		if ($rand) {
 			$data = (object) self::$questions[array_rand(self::$questions)];
 		}else {
-			$num1 = mt_rand(0, 9); 
+			$num1 = mt_rand(0, 9);
 			$num2 = mt_rand(0, 9);
 			$calc = mt_rand(0, 1) ? 'sum' : 'difference' ;
 			$total = $calc == 'sum' ? $num1 + $num2 : $num1 - $num2 ;

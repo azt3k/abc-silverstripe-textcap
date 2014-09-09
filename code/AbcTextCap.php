@@ -20,7 +20,7 @@ class AbcTextCap {
 					$data->a[] = $a->nodeValue;
 				}
 
-			} 
+			}
 		}
 
 		// fall back to the internal "database" of questions
@@ -32,7 +32,7 @@ class AbcTextCap {
 			}
 			$data->a = $as;
 		}
-		
+
 		// save the cap data
 		Session::set("AbcTextCap", $data);
 

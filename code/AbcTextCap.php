@@ -42,11 +42,10 @@ class AbcTextCap {
 
 	public static function validate($answer) {
 		$data = Session::get("AbcTextCap");
-		$isValid = false;
 		foreach ($data->a as $a) {
-			if (md5(strtolower(trim($answer))) == $a) $isValid = true;
+			if (md5(strtolower(trim($answer))) == $a) return true;
 		}
-		return $isValid;
+		return false;
 	}
 
 }

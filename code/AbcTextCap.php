@@ -2,12 +2,30 @@
 
 class AbcTextCap {
 
-	public static $text_captcha_api_key = null;
+	/**
+     * @config
+     */
+    private static $text_captcha_api_key = null;
 
+	/**
+	 * Sets the API Key
+	 * @param [type] $key [description]
+	 */
+	public static function set_text_captcha_api_key($key = null) {
+		static::$text_captcha_api_key = $key;
+	}
+
+	/**
+	 * [getCapData description]
+	 */
 	public static function getCapData(){
 
+		// API Key
+		$key = Config::inst()->get('AbcTextCap', 'text_captcha_api_key');
+		if (!$key) $key = uniqid();
+
 		// try to use the text captcha service
-		$response = file_get_contents('http://api.textcaptcha.com/'.self::$text_captcha_api_key);
+		$response = file_get_contents('http://api.textcaptcha.com/' . $key . '.xml');
 		if ($response) {
 			$document = new DOMDocument();
 			if ($document->loadXML($response)) {

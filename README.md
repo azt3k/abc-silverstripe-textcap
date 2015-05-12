@@ -13,12 +13,22 @@ Setup
 
 2. run `composer install`
 
-3. go to http://textcaptcha.com/ and sign up for an api key
+3. go to `http://textcaptcha.com/` and sign up for an api key
 
-4. Insert the following into your project/_config.php file replacing `your-api-key` with the api key you got in step 3
+4. Configure API Key (this is now optional)
+
+Insert the following into your `project/_config.php` file replacing `your-api-key` with the api key you got in step 3
 
 ````php
-AbcTextCap::$text_captcha_api_key = 'your-api-key'
+AbcTextCap::set_text_captcha_api_key('your-api-key')
+````
+- OR -
+
+Insert the following into your `project/_config/config.yml` file
+
+````yaml
+AbcTextCap:
+  text_captcha_api_key: your-api-key
 ````
 
 5. Add a captcha field to your form
@@ -74,6 +84,3 @@ class ContactForm extends Form {
 
 }
 ````
-
-
-

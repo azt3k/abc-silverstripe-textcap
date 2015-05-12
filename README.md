@@ -7,7 +7,7 @@ Setup
 
 ````json
 "require": {
-    "azt3k/abc-silverstripe-textcap" : "dev-master"
+    "azt3k/abc-silverstripe-textcap" : "*@stable"
 }
 ````
 

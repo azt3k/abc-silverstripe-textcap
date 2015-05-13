@@ -13,7 +13,7 @@ Setup
 
 2. run `composer install`
 
-3. go to `http://textcaptcha.com/` and sign up for an api key
+3. go to `http://textcaptcha.com/` and sign up for an api key (this is now optional)
 
 4. Configure API Key (this is now optional)
 

@@ -1,3 +1,3 @@
 <?php
 
-// AbcTextCap::$text_captcha_api_key = 'thisisnotarealapikey';
+// AbcTextCap::set_text_captcha_api_key('thisisnotarealapikey');
